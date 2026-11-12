@@ -27,34 +27,35 @@ $\chi : \mathbb{A}_K^\times / K^\times \to \mathbb{C}^\times$.
 
 For a Schwartz–Bruhat function $f$ on $\mathbb{A}_K$, Tate's global zeta integral is
 
-$$
-Z(f, \chi, s) = \int_{\mathbb{A}_K^\times} f(x)\, \chi(x)\, |x|^s \, d^\times x .
-$$
+```math
+Z(f, \chi, s) = \int_{\mathbb{A}_K^\times} f(x)\, \chi(x)\, \lvert x \rvert^s \, \mathrm{d}^\times x .
+```
 
 Following Tate, we aim to prove that:
 
-1. $Z(f, \chi, s)$ converges absolutely for $\operatorname{Re}(s) > 1$;
-2. it extends to a meromorphic function on $\mathbb{C}$, which is entire unless $\chi = |\cdot|^{i\tau}$
-   for some $\tau \in \mathbb{R}$, in which case it has at most simple poles at $s = -i\tau$
-   and $s = 1 - i\tau$;
+1. $Z(f, \chi, s)$ converges absolutely for $\mathrm{Re}(s) > 1$;
+2. it extends to a meromorphic function on $\mathbb{C}$, which is entire unless
+   $\chi = \lvert \cdot \rvert^{i\tau}$ for some $\tau \in \mathbb{R}$, in which case it has at
+   most simple poles at $s = -i\tau$ and $s = 1 - i\tau$;
 3. it satisfies the functional equation
 
-$$
-Z(f, \chi, s) = Z(\hat{f}, \chi^{-1}, 1 - s),
-$$
+   ```math
+   Z(f, \chi, s) = Z(\widehat{f}, \chi^{-1}, 1 - s),
+   ```
 
-   where $\hat{f}$ is the Fourier transform of $f$ with respect to the self-dual Haar measure.
+   where $\widehat{f}$ is the Fourier transform of $f$ with respect to the self-dual Haar measure.
 
 Combined with the local theory, this yields the functional equation of the completed Hecke
 L-function $\Lambda(s, \chi) = \prod_v L_v(s, \chi_v)$:
 
-$$
+```math
 \Lambda(s, \chi) = \varepsilon(s, \chi)\, \Lambda(1 - s, \chi^{-1}),
-$$
+```
 
 where $\varepsilon(s, \chi) = \prod_v \varepsilon_v(s, \chi_v, \psi_v)$ is the global epsilon
-factor, which has the form $W(\chi)\,\bigl(|d_K|\, N(\mathfrak{f}_\chi)\bigr)^{1/2 - s}$ with
-$|W(\chi)| = 1$.
+factor. It has the form $W(\chi) \left( \lvert d_K \rvert N(\mathfrak{f}_\chi) \right)^{1/2 - s}$,
+where $d_K$ is the discriminant of $K$, $\mathfrak{f}_\chi$ is the conductor of $\chi$, and
+$\lvert W(\chi) \rvert = 1$.
 
 ## Building the project
 
